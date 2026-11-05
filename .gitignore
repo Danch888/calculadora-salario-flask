@@ -1,0 +1,19 @@
+# Ambientes virtuais Python
+venv/
+env/
+ENV/
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações de ambiente e IDEs
+.env
+.vscode/
+.idea/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
