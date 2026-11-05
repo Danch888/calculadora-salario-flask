@@ -76,7 +76,7 @@ calculadora-salario-flask/
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/daniel88ubajara/calculadora-salario-flask.git
+   git clone https://github.com/Danch888/calculadora-salario-flask.git
    cd calculadora-salario-flask
    ```
 
@@ -127,4 +127,4 @@ As capturas de tela da aplicação e dos testes estão na pasta [`prints/`](./pr
 Desenvolvido por **Daniel Lima**  
 Estudante de Análise e Desenvolvimento de Sistemas (ADS).
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github)](https://github.com/daniel88ubajara)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github)](https://github.com/Danch888)
