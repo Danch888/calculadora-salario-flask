@@ -118,7 +118,7 @@ As capturas de tela da aplicação e dos testes estão na pasta [`prints/`](./pr
 
 | Formulário de Entrada | Resultado do Cálculo |
 | :---: | :---: |
-| ![Formulário](prints/6%20-%20Tela%20do%20Formulário.png) | ![Resultado](prints/8%20-%20Testando%20Valores%20-%20Resultado%201.png) |
+| ![Formulário de Entrada](prints/7%20-%20Testando%20Valores%20-%20Teste%201.png) | ![Resultado do Cálculo](prints/8%20-%20Testando%20Valores%20-%20Resultado%201.png) |
 
 ---
 
