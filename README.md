@@ -45,11 +45,11 @@ A aplicação foi submetida a uma bateria de testes cobrindo tanto cálculos nor
 | Cenário de Teste | Salário Bruto | Dependentes | Resultado Esperado / Obtido |
 | :--- | :---: | :---: | :--- |
 | **Teste 1** | R$ 3.000,00 | 2 | `Salário líquido: R$ 2710.00` |
-| **Teste 2** | R$ 2.000,00 | 0 | `Salário líquido: R$ 1840.00` |
-| **Teste 3** | R$ 2.500,00 | 1 | `Salário líquido: R$ 2500.00` |
-| **Teste 4** | R$ 4.000,00 | 3 | `Salário líquido: R$ 3680.00` |
+| **Teste 2** | R$ 2.000,00 | 1 | `Salário líquido: R$ 2040.00` |
+| **Teste 3** | R$ 1.000,00 | 0 | `Salário líquido: R$ 920.00` |
+| **Teste 4 (Salário Negativo)** | -R$ 500,00 | 1 | `Erro: Salário e número de dependentes devem ser maiores ou iguais a zero.` |
 | **Teste 5 (Entrada Inválida)** | `abc` | 2 | `Erro: Insira valores válidos para salário e dependentes.` |
-| **Teste 6 (Valor Negativo)** | R$ 2.500,00 | -1 | `Erro: Salário e número de dependentes devem ser maiores ou iguais a zero.` |
+| **Teste 6 (Dependentes Negativos)** | R$ 2.500,00 | -1 | `Erro: Salário e número de dependentes devem ser maiores ou iguais a zero.` |
 | **Teste 7 (Salário Zero com Dependentes)** | R$ 0,00 | 2 | `Erro: Não é possível aplicar dedução de dependentes para salário bruto igual a zero.` |
 | **Teste 8 (Salário Zero sem Dependentes)** | R$ 0,00 | 0 | `Salário líquido: R$ 0.00` |
 
@@ -122,32 +122,32 @@ calculadora-salario-flask/
 
 Todas as capturas de tela dos testes executados na aplicação estão organizadas abaixo e disponíveis na pasta [`prints/`](./prints):
 
-### Teste 1: Salário R$ 3.000,00 e 2 Dependentes (IR 15% + INSS 8%)
+### Teste 1: Salário R$ 3.000,00 e 2 Dependentes (INSS 8% + IRRF 15% + Dedução)
 | Formulário de Entrada | Resultado do Cálculo |
 | :---: | :---: |
 | ![Teste 1 - Entrada](prints/7%20-%20Testando%20Valores%20-%20Teste%201.png) | ![Teste 1 - Resultado](prints/8%20-%20Testando%20Valores%20-%20Resultado%201.png) |
 
-### Teste 2: Salário R$ 2.000,00 e 0 Dependentes (Isento de IR)
+### Teste 2: Salário R$ 2.000,00 e 1 Dependente (Isento de IRRF + INSS 8% + Dedução)
 | Formulário de Entrada | Resultado do Cálculo |
 | :---: | :---: |
 | ![Teste 2 - Entrada](prints/9%20-%20Testando%20Valores%20-%20Teste%202.png) | ![Teste 2 - Resultado](prints/10%20-%20Testando%20Valores%20-%20Resultado%202.png) |
 
-### Teste 3: Salário R$ 2.500,00 e 1 Dependente (Isento de IR)
+### Teste 3: Salário R$ 1.000,00 e 0 Dependentes (Isento de IRRF + INSS 8%)
 | Formulário de Entrada | Resultado do Cálculo |
 | :---: | :---: |
 | ![Teste 3 - Entrada](prints/11%20-%20Testando%20Valores%20-%20Teste%203.png) | ![Teste 3 - Resultado](prints/12%20-%20Testando%20Valores%20-%20Resultado%203.png) |
 
-### Teste 4: Salário R$ 4.000,00 e 3 Dependentes (IR 15% + INSS 8%)
-| Formulário de Entrada | Resultado do Cálculo |
+### Teste 4: Validação de Salário Negativo (-R$ 500,00 e 1 Dependente)
+| Formulário de Entrada | Mensagem de Erro |
 | :---: | :---: |
 | ![Teste 4 - Entrada](prints/13%20-%20Testando%20Valores%20-%20Teste%204.png) | ![Teste 4 - Resultado](prints/14%20-%20Testando%20Valores%20-%20Resultado%204.png) |
 
-### Teste 5: Validação de Entrada Inválida ('abc')
+### Teste 5: Validação de Entrada Inválida ('abc' e 2 Dependentes)
 | Formulário de Entrada | Mensagem de Erro |
 | :---: | :---: |
 | ![Teste 5 - Entrada](prints/15%20-%20Testando%20Valores%20-%20Teste%205.png) | ![Teste 5 - Resultado](prints/16%20-%20Testando%20Valores%20-%20Resultado%205.png) |
 
-### Teste 6: Validação de Valor Negativo (Dependentes = -1)
+### Teste 6: Validação de Valor Negativo de Dependentes (Salário R$ 2.500,00 e Dependentes = -1)
 | Formulário de Entrada | Mensagem de Erro |
 | :---: | :---: |
 | ![Teste 6 - Entrada](prints/17%20-%20Testando%20Valores%20-%20Teste%206.png) | ![Teste 6 - Resultado](prints/18%20-%20Testando%20Valores%20-%20Resultado%206.png) |
