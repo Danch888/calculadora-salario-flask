@@ -120,11 +120,37 @@ calculadora-salario-flask/
 
 ## 📸 Demonstração e Testes
 
-As capturas de tela da aplicação e dos testes estão na pasta [`prints/`](./prints). Exemplos:
+Todas as capturas de tela dos testes executados na aplicação estão organizadas abaixo e disponíveis na pasta [`prints/`](./prints):
 
+### Teste 1: Salário R$ 3.000,00 e 2 Dependentes (IR 15% + INSS 8%)
 | Formulário de Entrada | Resultado do Cálculo |
 | :---: | :---: |
-| ![Formulário de Entrada](prints/7%20-%20Testando%20Valores%20-%20Teste%201.png) | ![Resultado do Cálculo](prints/8%20-%20Testando%20Valores%20-%20Resultado%201.png) |
+| ![Teste 1 - Entrada](prints/7%20-%20Testando%20Valores%20-%20Teste%201.png) | ![Teste 1 - Resultado](prints/8%20-%20Testando%20Valores%20-%20Resultado%201.png) |
+
+### Teste 2: Salário R$ 2.000,00 e 0 Dependentes (Isento de IR)
+| Formulário de Entrada | Resultado do Cálculo |
+| :---: | :---: |
+| ![Teste 2 - Entrada](prints/9%20-%20Testando%20Valores%20-%20Teste%202.png) | ![Teste 2 - Resultado](prints/10%20-%20Testando%20Valores%20-%20Resultado%202.png) |
+
+### Teste 3: Salário R$ 2.500,00 e 1 Dependente (Isento de IR)
+| Formulário de Entrada | Resultado do Cálculo |
+| :---: | :---: |
+| ![Teste 3 - Entrada](prints/11%20-%20Testando%20Valores%20-%20Teste%203.png) | ![Teste 3 - Resultado](prints/12%20-%20Testando%20Valores%20-%20Resultado%203.png) |
+
+### Teste 4: Salário R$ 4.000,00 e 3 Dependentes (IR 15% + INSS 8%)
+| Formulário de Entrada | Resultado do Cálculo |
+| :---: | :---: |
+| ![Teste 4 - Entrada](prints/13%20-%20Testando%20Valores%20-%20Teste%204.png) | ![Teste 4 - Resultado](prints/14%20-%20Testando%20Valores%20-%20Resultado%204.png) |
+
+### Teste 5: Validação de Entrada Inválida ('abc')
+| Formulário de Entrada | Mensagem de Erro |
+| :---: | :---: |
+| ![Teste 5 - Entrada](prints/15%20-%20Testando%20Valores%20-%20Teste%205.png) | ![Teste 5 - Resultado](prints/16%20-%20Testando%20Valores%20-%20Resultado%205.png) |
+
+### Teste 6: Validação de Valor Negativo (Dependentes = -1)
+| Formulário de Entrada | Mensagem de Erro |
+| :---: | :---: |
+| ![Teste 6 - Entrada](prints/17%20-%20Testando%20Valores%20-%20Teste%206.png) | ![Teste 6 - Resultado](prints/18%20-%20Testando%20Valores%20-%20Resultado%206.png) |
 
 ---
 
