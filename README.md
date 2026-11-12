@@ -48,6 +48,8 @@ A aplicação foi submetida a uma bateria de testes cobrindo fluxos felizes e ce
 | **Teste 4** | R$ 4.000,00 | 3 | `Salário líquido: R$ 3680.00` |
 | **Teste 5 (Entrada Inválida)** | `abc` | 2 | `Erro: Insira valores válidos para salário e dependentes.` |
 | **Teste 6 (Valor Negativo)** | R$ 2.500,00 | -1 | `Erro: Salário e número de dependentes devem ser maiores ou iguais a zero.` |
+| **Teste 7 (Salário Zero com Dependentes)** | R$ 0,00 | 2 | `Erro: Não é possível aplicar dedução de dependentes para salário bruto igual a zero.` |
+| **Teste 8 (Salário Zero sem Dependentes)** | R$ 0,00 | 0 | `Salário líquido: R$ 0.00` |
 
 ---
 

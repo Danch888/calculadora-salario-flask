@@ -16,6 +16,10 @@ def resultado():
         if salario < 0 or dependentes < 0:
             return "Erro: Salário e número de dependentes devem ser maiores ou iguais a zero."
 
+        # Validação: Salário zero não admite acréscimo/dedução por dependentes
+        if salario == 0 and dependentes > 0:
+            return "Erro: Não é possível aplicar dedução de dependentes para salário bruto igual a zero."
+
         # Regras de Negócio
         inss = salario * 0.08
 
@@ -24,7 +28,8 @@ def resultado():
         else:
             ir = 0.0
 
-        bonus_dependentes = dependentes * 200.00
+        # O bônus só se aplica sobre salário bruto existente
+        bonus_dependentes = dependentes * 200.00 if salario > 0 else 0.0
 
         # Cálculo do Salário Líquido
         salario_liquido = salario - inss - ir + bonus_dependentes
