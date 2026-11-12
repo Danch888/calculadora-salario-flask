@@ -34,11 +34,13 @@ A aplicação calcula o salário líquido a partir do salário bruto e da quanti
 
 $$\text{Salário Líquido} = \text{Salário Bruto} - \text{INSS} - \text{IRRF} + (\text{Dependentes} \times 200{,}00)$$
 
+> ℹ️ **Condição de Aplicação de Dependentes**: O acréscimo de R$ 200,00 por dependente atua como dedução e só é aplicado caso haja salário bruto positivo informado ($\text{Salário Bruto} > 0$). Para salário zero, o benefício não é aplicável.
+
 ---
 
 ## 🧪 Casos de Testes Documentados
 
-A aplicação foi submetida a uma bateria de testes cobrindo fluxos felizes e cenários de exceção:
+A aplicação foi submetida a uma bateria de testes cobrindo tanto cálculos normais com dados válidos quanto situações de erro e dados inválidos (como caracteres alfabéticos, valores negativos e salário zerado com dependentes):
 
 | Cenário de Teste | Salário Bruto | Dependentes | Resultado Esperado / Obtido |
 | :--- | :---: | :---: | :--- |
@@ -92,6 +94,8 @@ calculadora-salario-flask/
    python3 -m venv venv
    source venv/bin/activate
    ```
+   > 💡 *Dica (Windows): Caso o PowerShell bloqueie a execução do script de ativação da venv, execute temporariamente na sessão:*  
+   > `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
 3. **Instale as dependências:**
    ```bash
